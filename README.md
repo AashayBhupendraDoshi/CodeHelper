@@ -1,2 +1,2 @@
 # CodeHelper
-Code UNderstanding and Troubleshooting Assistant
+GPT4 powered code documentation, debugging and development tool
