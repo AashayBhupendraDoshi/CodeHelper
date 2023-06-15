@@ -2,13 +2,13 @@ import os
 import openai
 import numpy as np
 import pandas as pd
-from indexing import indexing
+from utils.indexing import indexing
 
 
 
 class ProcessCode:
     def __init__(self, ignoreFiles: list) -> None:
-        openai.api_key = "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"
+        openai.api_key = os.getenv("OPENAI_KEY")
         self.inference_dir = "./process_files/"
         self.indexer = indexing()
         self.prompt = '''Explain this code to me:

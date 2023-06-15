@@ -36,5 +36,5 @@ class ProcessQuery:
 
     
 a = ProcessQuery()
-output = a.process("What does single_emb_search do?", "mumbaiHacks", "/home/abd/Desktop/projects/mumbaiHacks/")
-print(output)
+# output = a.process("What does single_emb_search do?", "mumbaiHacks", "/home/abd/Desktop/projects/mumbaiHacks/")
+# print(output)
