@@ -1,14 +1,15 @@
-import os
+from dotenv import dotenv_values
 import openai
 import numpy as np
 import pandas as pd
-from utils.indexing import indexing
+from indexing import indexing
 
 
 
 class ProcessCode:
     def __init__(self, ignoreFiles: list) -> None:
-        openai.api_key = os.getenv("OPENAI_KEY")
+        self.config = dotenv_values()
+        openai.api_key = self.config["OPENAI_KEY"]
         self.inference_dir = "./process_files/"
         self.indexer = indexing()
         self.prompt = '''Explain this code to me:

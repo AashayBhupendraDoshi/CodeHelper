@@ -1,3 +1,4 @@
+from dotenv import dotenv_values
 import openai
 from indexing import indexing
 from retrieval import single_emb_search
@@ -6,8 +7,9 @@ from retrieval import single_emb_search
 
 class ProcessQuery:
     def __init__(self) -> None:
+        self.config = dotenv_values()
         self.indexer = indexing()
-        openai.api_key = "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"
+        openai.api_key = self.config["OPENAI_KEY"]
         pass
 
 
